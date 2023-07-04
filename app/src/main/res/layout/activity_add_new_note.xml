@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewNote"
+    android:orientation="vertical"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.NotepadApp.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.NotepadApp.PopupOverlay">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Note Activity"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <EditText
+        android:id="@+id/account_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Account Description"
+        android:inputType="text"
+        android:padding="25sp"
+        android:layout_margin="15sp"/>
+    <EditText
+        android:id="@+id/account_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Account username"
+        android:inputType="text"
+        android:padding="25sp"
+        android:layout_margin="15sp"/>
+    <EditText
+        android:id="@+id/account_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Account password"
+        android:inputType="text"
+        android:padding="25sp"
+        android:layout_margin="15sp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Create Note"
+        android:id="@+id/createNote"
+        android:padding="25sp"
+        android:layout_margin="15sp"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Back"
+        android:id="@+id/back"
+        android:padding="25sp"
+        android:layout_margin="15sp"/>
+
+
+
+
+</LinearLayout>

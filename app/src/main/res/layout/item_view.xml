@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/rounded_corner">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/note_description"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        tools:text ="description"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/note_AccountName"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/note_description"
+        tools:text="accountname"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/note_AccountPassword"
+        android:layout_below="@+id/note_AccountName"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        tools:text="accountpassword"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/uniqueID"
+        android:layout_below="@+id/note_AccountPassword"
+        android:textSize="10sp"
+        android:textColor="@color/black"
+        tools:text="uniqueID"
+        />
+
+</RelativeLayout>
