@@ -54,9 +54,9 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this,setPin.class));
 
             // Once the necessary actions are completed, set the flag to false
-            /*SharedPreferences.Editor editor = sharedPreferences.edit();
+            SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putBoolean("isFirstTime", false);
-            editor.apply();*/
+            editor.apply();
         }
 
         else{

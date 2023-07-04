@@ -2,6 +2,7 @@ package com.example.notepadapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
@@ -18,6 +19,10 @@ public class setPin extends AppCompatActivity {
     EditText pin;
     EditText confirm_pin;
     TextView description;
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,10 +48,17 @@ public class setPin extends AppCompatActivity {
                 int confirm_pin_val = Integer.parseInt(confirm_pin.getText().toString());
                 int len_pin = pin.getText().toString().length();
 
+                SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+
 
                 if (len_pin<6) Toast.makeText(setPin.this, "PIN too short!", Toast.LENGTH_SHORT).show();
                 else if (pin_val == confirm_pin_val){
+                    editor.putInt("MyPIN", pin_val);
+                    editor.apply();
+
                     Toast.makeText(setPin.this, "PIN set!", Toast.LENGTH_SHORT).show();
+
                     finish();
                 }
                 else Toast.makeText(setPin.this, "PINs do not match!", Toast.LENGTH_SHORT).show();
